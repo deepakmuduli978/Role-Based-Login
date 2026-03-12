@@ -11,7 +11,7 @@
 
 <div class="navbar">
     <h2>Admin Dashboard</h2>
-    <a href="login.jsp" class="logout">Logout</a>
+    <a href="logout.jsp" class="logout">Logout</a>
 </div>
 
 <div class="container">
@@ -41,7 +41,7 @@
     <h3>Settings</h3>
     <p>System Settings</p>
 </div>
-<a href="logout.jsp">Logout</a>
+
 
 </div>
 
