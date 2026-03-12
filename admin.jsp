@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<jsp:useBean id="user" class="com.RoleBasedLogin.bean.userbean" scope="session"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,11 @@
 <div class="container">
 
 <h2>Welcome Admin 👨‍💼</h2>
+<div>
+   <h1> Hii <jsp:getProperty name="user" property="mail"/></h1>
 
+
+</div>
 <div class="card">
     <h3>Students</h3>
     <p>Manage Students</p>
@@ -36,6 +41,7 @@
     <h3>Settings</h3>
     <p>System Settings</p>
 </div>
+<a href="logout.jsp">Logout</a>
 
 </div>
 
