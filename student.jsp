@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<jsp:useBean id="user" class="com.RoleBasedLogin.bean.userbean" scope="session"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,9 @@
     <div class="navbar">
         <h2>Student Dashboard</h2>
         <a href="login.jsp" class="logout">Logout</a>
+    </div>
+    <div>
+        <h1>Hii <jsp:getProperty name="user" property="mail"/></h1>
     </div>
 
     <div class="container">
