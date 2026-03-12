@@ -1,60 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+
+<jsp:useBean id="user" class="com.RoleBasedLogin.bean.userbean" scope="session"/>
+<jsp:setProperty name="user" property="*"/>
+
+<%
+int n1 = (int)(Math.random()*10);
+int n2 = (int)(Math.random()*10);
+session.setAttribute("sum", n1+n2);
+%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<h2>Login</h2>
 
-    <div class="login-box">
+<form action="authenticate.jsp" method="post">
 
-        <h2>Welcome Back</h2>
-        <p class="subtitle">Login to your account</p>
+Email:
+<input type="email" name="mail" required><br><br>
 
-        <form action="Login.jsp" method="post">
+Password:
+<input type="password" name="pass" required><br><br>
+Captura:<b><%=n1%>+<%=n2%>=?</b>
+<input type="text" name="captcha"><br><br>
+<button type="submit">Login</button>
 
-            <div class="input-group">
-                <input type="email" name="Email" required>
-                <label>Email Address</label>
-            </div>
-
-            <div class="input-group">
-                <input type="password" name="pass" required>
-                <label>Password</label>
-            </div>
-
-            <button type="submit" class="login-btn">Login</button>
-
-        </form>
-
-        <p class="signup-text">
-            Don't have an account?
-            <a href="#">Sign Up</a>
-        </p>
-
-    </div>
-
-</div>
-<%
-String email=request.getParameter("Email");
-String pass=request.getParameter("pass");
-if(email!=null&&pass!=null){
-    if(email.equals("student@gmail.com")&&pass.equals("student@123")){
-        response.sendRedirect("student.jsp");
-    }
-    else if(email.equals("admin@gmail.com")&&pass.equals("admin@123")){
-        response.sendRedirect("admin.jsp");
-    }
-    else{
-        out.println("<h4>invalid user name and password</h4>");
-    }
-}
-%>
-
+</form>
 </body>
 </html>
