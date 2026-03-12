@@ -5,5 +5,5 @@
     session.invalidate();
 
     // Redirect user back to login page
-    response.sendRedirect("login.jsp");
+    response.sendRedirect("Login.jsp");
 %>

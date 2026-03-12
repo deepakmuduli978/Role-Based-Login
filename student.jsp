@@ -12,7 +12,7 @@
 
     <div class="navbar">
         <h2>Student Dashboard</h2>
-        <a href="login.jsp" class="logout">Logout</a>
+        <a href="Login.jsp" class="logout">Logout</a>
     </div>
     <div>
         <h1>Hii <jsp:getProperty name="user" property="mail"/></h1>
