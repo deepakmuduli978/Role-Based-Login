@@ -18,19 +18,26 @@ session.setAttribute("sum", n1+n2);
 
 <body>
 
+<div class="login-container">
+
 <h2>Login</h2>
 
 <form action="authenticate.jsp" method="post">
 
-Email:
-<input type="email" name="mail" required><br><br>
+<label>Email</label>
+<input type="email" name="mail" required>
 
-Password:
-<input type="password" name="pass" required><br><br>
-Captura:<b><%=n1%>+<%=n2%>=?</b>
-<input type="text" name="captcha"><br><br>
+<label>Password</label>
+<input type="password" name="pass" required>
+
+<label>Captcha: <b><%=n1%> + <%=n2%> = ?</b></label>
+<input type="text" name="captcha" required>
+
 <button type="submit">Login</button>
 
 </form>
+
+</div>
+
 </body>
 </html>
